@@ -78,13 +78,13 @@ const Search = ({ searchQuery }) => {
         </div>
       ) : (
         <>
-         {!trimmedQuery && !displayData && (
+         {!trimmedQuery && displayData.length===0 && (
             <div className="flex flex-col items-center mt-10">
               <p className="text-gray-400 text-center mb-4 font-bold text-sm sm:text-md md:text-xl">
                 Search your favorite movie or series!!
               </p>
               <div className="bg-gray-800 rounded-full p-6 mb-6 shadow-md">
-                <SearchOutlined className="text-gray-600 text-6xl" />
+                <SearchOutlined className="text-gray-600 text-3xl md:text-6xl" />
               </div>
 
             </div>
