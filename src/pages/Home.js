@@ -64,27 +64,27 @@ const Home = () => {
       </div>
 
       <div className=" justify-start mx-[1rem] mt-[3rem] ">
-        {/* <h2 className="font-bold text-2xl text-white font-inter">Movies</h2> */}
-         <h2 className="font-bold text-2xl tracking-wide">Trending Movies</h2>
-         <div className="mt-1 w-[] h-1 bg-cyan-400/80 rounded-full"></div>
+
+        <h2 className="font-bold text-2xl tracking-wide">Trending Movies</h2>
+        <div className="mt-1 w-[] h-1 bg-cyan-400/80 rounded-full"></div>
 
       </div>
-      {/* <div className="w-full h-0.5 bg-gray-300/40 blur-6 mt-4"></div> */}
-      
+
+
 
       <div className="grid grid-cols-2 gap-3 sm:grid-cols-3 sm:gap-3 md:grid-cols-4 md:gap-4 lg:grid-cols-5 lg:gap-4 justify-items-center mt-8 pb-[4rem]">
-          {allMoviesData?.map((post) => (
-            <Card
-              key={post.imdbID}
-              id={post.imdbID}
-              title={post.Title}
-              image={post.Poster}
-              type={post.Type}
-              year={post.Year}
-              onClick={() => handleCardClick(post.imdbID)}
-            />
-          ))}
-        
+        {allMoviesData?.map((post) => (
+          <Card
+            key={post.imdbID}
+            id={post.imdbID}
+            title={post.Title}
+            image={post.Poster}
+            type={post.Type}
+            year={post.Year}
+            onClick={() => handleCardClick(post.imdbID)}
+          />
+        ))}
+
       </div>
 
       {showPopup && selectedMovie && movieData && (

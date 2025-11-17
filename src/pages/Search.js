@@ -65,7 +65,6 @@ const Search = ({ searchQuery }) => {
   const closePopup = () => {
     setShowPopup(false);
     setSelectedMovie(null);
-
   }
 
 
